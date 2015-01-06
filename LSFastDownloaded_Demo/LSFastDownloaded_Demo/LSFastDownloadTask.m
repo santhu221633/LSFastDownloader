@@ -24,10 +24,14 @@ NSString  * const LSErrorDomain = @"LSErrorDomain";
 @property (nonatomic,strong) NSURLSession *session;
 @property (nonatomic,strong) NSURLSessionConfiguration *sessionConfiguration;
 @property (nonatomic,strong) NSOperationQueue *operationQueue;
+
+//we will store the partially downloaded files data locations in below array
+//After all have been downloaded, we finally combine all of them and place it in documents directory.
 @property (nonatomic,strong) NSMutableArray *locations;
 @property (nonatomic,assign) int pendingDownloads;
 @property (nonatomic,strong) LSCompletion completion;
 @property (nonatomic,strong) NSURLSessionDataTask *initialDataTask;
+@property (nonatomic,assign) BOOL isSessionCancelled;
 
 @property (nonatomic,assign) int indexUsedForCreatingTempFiles;
 @end
@@ -228,8 +232,11 @@ didReceiveResponse:(NSURLResponse *)response
 }
 
 -(void)cancelSession:(NSError *)error{
-    [self.session invalidateAndCancel];
-    self.completion(error,nil);
+    if (self.isSessionCancelled == false) {
+        [self.session invalidateAndCancel];
+        self.isSessionCancelled = true;
+        self.completion(error,nil);
+    }
 }
 
 @end
