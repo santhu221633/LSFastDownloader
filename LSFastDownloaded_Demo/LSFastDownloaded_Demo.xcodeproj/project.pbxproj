@@ -12,6 +12,10 @@
 		CA36F63E1A5C4EE400B13C34 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA36F63D1A5C4EE400B13C34 /* ViewController.m */; };
 		CA36F6431A5C4EE400B13C34 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA36F6421A5C4EE400B13C34 /* Images.xcassets */; };
 		CA36F6521A5C4EE500B13C34 /* LSFastDownloaded_DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA36F6511A5C4EE500B13C34 /* LSFastDownloaded_DemoTests.m */; };
+		CA6F4F821A5C54B500AABCBB /* LSFastDownloadTask.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6F4F811A5C54B500AABCBB /* LSFastDownloadTask.m */; };
+		CA6F4F841A5C57A900AABCBB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA6F4F831A5C57A900AABCBB /* UIKit.framework */; };
+		CA6F4F861A5C57B100AABCBB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA6F4F851A5C57B100AABCBB /* Foundation.framework */; };
+		CA6F4F871A5C57C600AABCBB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA36F6361A5C4EE400B13C34 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		CA36F64B1A5C4EE500B13C34 /* LSFastDownloaded_DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LSFastDownloaded_DemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA36F6501A5C4EE500B13C34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA36F6511A5C4EE500B13C34 /* LSFastDownloaded_DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSFastDownloaded_DemoTests.m; sourceTree = "<group>"; };
+		CA6F4F801A5C54B500AABCBB /* LSFastDownloadTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSFastDownloadTask.h; sourceTree = "<group>"; };
+		CA6F4F811A5C54B500AABCBB /* LSFastDownloadTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSFastDownloadTask.m; sourceTree = "<group>"; };
+		CA6F4F831A5C57A900AABCBB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CA6F4F851A5C57B100AABCBB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA6F4F861A5C57B100AABCBB /* Foundation.framework in Frameworks */,
+				CA6F4F841A5C57A900AABCBB /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				CA36F6341A5C4EE400B13C34 /* LSFastDownloaded_Demo */,
+				CA6F4F881A5C580700AABCBB /* Frameworks */,
 				CA36F64E1A5C4EE500B13C34 /* LSFastDownloaded_DemoTests */,
 				CA36F6331A5C4EE400B13C34 /* Products */,
 			);
@@ -81,6 +92,8 @@
 				CA36F63A1A5C4EE400B13C34 /* AppDelegate.m */,
 				CA36F63C1A5C4EE400B13C34 /* ViewController.h */,
 				CA36F63D1A5C4EE400B13C34 /* ViewController.m */,
+				CA6F4F801A5C54B500AABCBB /* LSFastDownloadTask.h */,
+				CA6F4F811A5C54B500AABCBB /* LSFastDownloadTask.m */,
 				CA36F6421A5C4EE400B13C34 /* Images.xcassets */,
 				CA36F6351A5C4EE400B13C34 /* Supporting Files */,
 			);
@@ -111,6 +124,15 @@
 				CA36F6501A5C4EE500B13C34 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CA6F4F881A5C580700AABCBB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CA6F4F851A5C57B100AABCBB /* Foundation.framework */,
+				CA6F4F831A5C57A900AABCBB /* UIKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +215,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA6F4F871A5C57C600AABCBB /* Info.plist in Resources */,
 				CA36F6431A5C4EE400B13C34 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,6 +237,7 @@
 				CA36F63E1A5C4EE400B13C34 /* ViewController.m in Sources */,
 				CA36F63B1A5C4EE400B13C34 /* AppDelegate.m in Sources */,
 				CA36F6381A5C4EE400B13C34 /* main.m in Sources */,
+				CA6F4F821A5C54B500AABCBB /* LSFastDownloadTask.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +340,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = LSFastDownloaded_Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -326,6 +351,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = LSFastDownloaded_Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -385,6 +411,7 @@
 				CA36F6571A5C4EE500B13C34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CA36F6581A5C4EE500B13C34 /* Build configuration list for PBXNativeTarget "LSFastDownloaded_DemoTests" */ = {
 			isa = XCConfigurationList;
@@ -393,6 +420,7 @@
 				CA36F65A1A5C4EE500B13C34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
